@@ -1,10 +1,15 @@
 import { getImages } from './pixabay-api';
-// const { getImages } = require('./pixabay-api');
 const searchForm = document.querySelector('#search-form');
 const input = document.querySelector('.form-input');
 const imagesList = document.querySelector('.gallery');
 const loadMore = document.querySelector('.load-more');
 const lastPage = document.querySelector('.last-page');
+
+const lightbox = new SimpleLightbox('.gallery a', {
+    captions: true,
+    captionDelay: 250,
+    captionsData: "alt",
+        });
 
 searchForm.addEventListener('submit', onFormSubmit);
 let page = 1;
@@ -56,11 +61,7 @@ function onFormSubmit(e) {
     imagesList.insertAdjacentHTML('beforeend', data);
         previousKeyWord = keyWord;
 
-        new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionDelay: 250,
-    captionsData: "alt",
-        });
+      lightbox.refresh()
       
       if (page > 1) {
 const { height: cardHeight } = document
@@ -98,55 +99,3 @@ function onClick(e) {
 
   onFormSubmit(e)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Make a request for a user with a given ID
-// axios.get('https://api.thecatapi.com/v1/breeds')
-//   .then(function (response) {
-//     // handle success
-//     console.log(response);
-//   })
-//   .catch(function (error) {
-//     // handle error
-//     console.log(error);
-//   })
-//   .finally(function () {
-//     // always executed
-//   });
-
-// Optionally the request above could also be done as
-// axios.get('/user', {
-//     params: {
-//       ID: 12345
-//     }
-//   })
-//   .then(function (response) {
-//     console.log(response);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   })
-//   .finally(function () {
-//     // always executed
-//   });  
-
-// // Want to use async/await? Add the `async` keyword to your outer function/method.
-// async function getUser() {
-//   try {
-//     const response = await axios.get('/user?ID=12345');
-//     console.log(response);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
