@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #008080;
+    padding: 5px;
+    position: fixed;
+    top: 0; /* Верхний отступ от верхнего края окна просмотра */
+    left: 0;
+    width: 100%;
+}
+
+.form-input {
+    border-radius: 20px 0px 0px 20px;
+    padding: 0;
+    border: 2px solid transparent;
+    outline: transparent;
+    padding: 5px 5px 1px 5px;
+
+}
+
+.button {
+    width: 30px;
+    height: 25px;
+    border-radius: 0px 20px 20px 0px;
+    border-color: transparent;
+    background-color: #A0522D;
+    cursor: pointer;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1260px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.photo-card {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 76%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-top: -4px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.load-more {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #008080;
+    border-radius: 20px;
+    border: 1px solid #008080;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.last-page {
+    display: none;
+    text-align: center;
+}
+
+.icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: black;
+}
