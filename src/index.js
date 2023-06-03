@@ -1,5 +1,5 @@
 import { getImages } from './pixabay-api';
-const { getImages } = require('./pixabay-api');
+// const { getImages } = require('./pixabay-api');
 const searchForm = document.querySelector('#search-form');
 const input = document.querySelector('.form-input');
 const imagesList = document.querySelector('.gallery');
